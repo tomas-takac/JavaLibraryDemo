@@ -21,7 +21,10 @@ public class Library {
     }
 
     public List<basic.model.Book> findBooksByAuthor(String author) {
-        return books.stream().filter(book -> book.author().equals(author)).collect(Collectors.toList());
+        return books
+                .stream()
+                .filter(book -> book.author().equals(author))
+                .collect(Collectors.toList());
     }
 
     public int countBooks() {
